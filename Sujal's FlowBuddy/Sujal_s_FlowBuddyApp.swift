@@ -1,17 +1,13 @@
-//
-//  Sujal_s_FlowBuddyApp.swift
-//  Sujal's FlowBuddy
-//
-//  Created by Sujal Uprety on 2025-11-17.
-//
-
 import SwiftUI
 
 @main
-struct Sujal_s_FlowBuddyApp: App {
+struct FlowBuddyApp: App {
+    @StateObject private var appState = AppState()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(appState)
         }
     }
 }
